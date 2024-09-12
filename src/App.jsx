@@ -14,8 +14,8 @@ import Home from "./Components/Home";
 function App() {
 
   const [show, setShow] = useState(false);
-  const [darkmode, setDarkmode] = useState("dark");
-  const [bgcolor, setBgcolor] = useState("black");
+  const [darkmode, setDarkmode] = useState("light");
+  const [bgcolor, setBgcolor] = useState("white");
   const [cross, setCross] = useState(false);
 
   const handleclick = () => {
