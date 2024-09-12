@@ -150,7 +150,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             }`}
         >
           <div className="w-40 h-40 rounded-full  image ">
-            <img src="src/Components/SocialLinks/ProfilePhoto.jpg" className="w-screen rounded-lg w-40 h-50 object-cover border-solid border-2 border-white " />
+            <img src="./SocialLinks/ProfilePhoto.jpg" className="w-screen rounded-lg w-40 h-50 object-cover border-solid border-2 border-white " />
           </div>
           <h1
             className={`text-2xl font-bold relative lg:top-20 sm:top-24 ${bgcolor === "white" ? "text-black" : "text-white"
