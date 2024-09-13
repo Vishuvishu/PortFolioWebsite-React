@@ -3,7 +3,6 @@ import { FaRegUser } from "react-icons/fa";
 import { PiNotepad } from "react-icons/pi";
 import { FaLaptopCode } from "react-icons/fa";
 import { TiContacts } from "react-icons/ti";
-import { LiaBlogSolid } from "react-icons/lia";
 import { NavLink } from "react-router-dom";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
@@ -35,6 +34,15 @@ const Navbar = ({ bgcolor, darkmode }) => {
               <h1 className="text-sm">Experiance</h1>
             </div>
           </NavLink>
+          <NavLink to="/Projects">
+            <div
+              className="w-16 rounded-lg flex flex-col justify-center items-center p-2"
+              style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
+            >
+              <FaLaptopCode className="text-2xl" />
+              <h1 className="text-sm">Projects</h1>
+            </div>
+          </NavLink>
           <NavLink to="/Skills">
 
             <div
@@ -46,7 +54,7 @@ const Navbar = ({ bgcolor, darkmode }) => {
             </div>
 
           </NavLink>
-          <NavLink to="/Projects">
+          {/* <NavLink to="/Projects">
             <div
               className="w-16 rounded-lg flex flex-col justify-center items-center p-2"
               style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
@@ -54,7 +62,7 @@ const Navbar = ({ bgcolor, darkmode }) => {
               <FaLaptopCode className="text-2xl" />
               <h1 className="text-sm">Projects</h1>
             </div>
-          </NavLink>
+          </NavLink> */}
 
 
           <NavLink to="/Contact">

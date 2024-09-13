@@ -9,7 +9,7 @@ const Experiance = ({ bgcolor, darkmode }) => {
 
   return (
     <>
-      {/* <div className="about p-3 "> */}
+      <div className="m-10 h-fit">
       <div className={` ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
         <h1 className={`text-3xl font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`} >Resume</h1>
 
@@ -76,7 +76,7 @@ const Experiance = ({ bgcolor, darkmode }) => {
         </div>
 
       </div>
-      {/* </div> */}
+      </div>
     </>
   );
 };

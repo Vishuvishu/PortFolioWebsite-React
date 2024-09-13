@@ -9,6 +9,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 
+import profilephotoimg from "../Components/SocialLinks/ProfilePhoto.jpg"
 import "../Components/Global.css";
 import cv from "../Components/SocialLinks/Resume.pdf";
 import { FaRegUser } from "react-icons/fa";
@@ -150,7 +151,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             }`}
         >
           <div className="w-40 h-40 rounded-full  image ">
-            <img src="./SocialLinks/ProfilePhoto.jpg" className="w-screen rounded-lg w-40 h-50 object-cover border-solid border-2 border-white " />
+            <img src={profilephotoimg} className="w-screen rounded-lg w-40 h-50 object-cover border-solid border-2 border-white " />
           </div>
           <h1
             className={`text-2xl font-bold relative lg:top-20 sm:top-24 ${bgcolor === "white" ? "text-black" : "text-white"
@@ -319,7 +320,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             </div>
           </div>
           <div className="flex relative top-5">
-            <button className="bg-[#64748b] flex items-center rounded-lg justify-center text-white p-2 text-md text-nowrap w-36 h-10">
+            <button className={`${bgcolor === "white" ? "bg-black text-white" : "bg-white text-black"}   flex items-center rounded-lg justify-center p-2 text-md text-nowrap w-36 h-10`}>
               {/* <a href={cv} download="Resume" className="flex"> */}
               <a href={"https://drive.google.com/file/d/1JVNneRNr845-oGLpgPgjUsmkEmH5Q0e-/view?usp=sharing"} className="flex gap-2">
 

@@ -10,7 +10,7 @@ const Home = ({ show, setShow, darkmode, bgcolor, cross, setCross, handleclick, 
   return (
     <>
 
-      <div className='w-full h-[100vh] homepage flex sm:flex-wrap md:flex-wrap sm:gap-4 md:gap-4 sm:justify-center md:justify-center justify-around items-center'>
+      <div className='w-full h-[100vh] m-10 homepage flex sm:flex-wrap md:flex-wrap sm:gap-3 md:gap-2 sm:justify-center md:justify-center justify-around items-center'>
         <div className=''>
           <Profile
             show={show}
@@ -25,7 +25,7 @@ const Home = ({ show, setShow, darkmode, bgcolor, cross, setCross, handleclick, 
           />
         </div>
 
-        <div className='w-[53rem] h-[100vh] overflow-auto rounded-lg'>
+        <div className='w-[53rem] h-[100vh] rounded-lg'>
           <Outlet />
         </div>
 

@@ -10,7 +10,7 @@ import "../Components/Global.css"
 const About = ({ bgcolor, darkmode }) => {
   return (
     <>
-      <div className="relative h-full">
+      <div className="relative h-fit m-10">
         <div className={`${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
           <h1 className={`text-3xl font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`} >About</h1>
           <p className="my-4  "

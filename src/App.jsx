@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+// import "./App.css";
 import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import Profile from "./Components/Profile";
@@ -10,7 +10,8 @@ import Projects from "./Components/Projects";
 import ForMobile from "./Components/ForMobile";
 import Skills from "./Components/Skills";
 import Home from "./Components/Home";
-
+import backlight from "./Components/SocialLinks/background.jpg";
+import backdark from "./Components/SocialLinks/background2.jpg";
 function App() {
 
   const [show, setShow] = useState(false);
@@ -33,7 +34,7 @@ function App() {
     if (darkmode === "light") {
       setDarkmode("dark");
       document.body.style.backgroundImage =
-        "url(./Components/SocialLinks/Background2.jpg)";
+        "url(https://i.pinimg.com/564x/37/24/db/3724db00677625d737f96f8faf8e31de.jpg)";
       document.body.style.width = "100%";
       setBgcolor("black");
     } else {
