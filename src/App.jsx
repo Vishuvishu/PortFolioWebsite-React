@@ -11,7 +11,7 @@ import ForMobile from "./Components/ForMobile";
 import Skills from "./Components/Skills";
 import Home from "./Components/Home";
 import backlight from "./Components/SocialLinks/background.jpg";
-import backdark from "./Components/SocialLinks/background2.jpg";
+import backdark from "./Components/SocialLinks/Background2.jpg";
 function App() {
 
   const [show, setShow] = useState(false);
