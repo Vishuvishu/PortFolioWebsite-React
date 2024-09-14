@@ -11,7 +11,7 @@ const ForMobile = ({show,setShow,handleDarkMode,darkmode,cross,handleclick,handl
 
   return (
     <>
-        <div className='for-mobile w-screen flex items-center h-[90px]'>
+        <div className='for-mobile w-screen flex items-center mt-5'>
              <div className='w-screen flex justify-around items-center p-1 main'>
                  <h1 className='text-3xl font-bold  text-pink-500'>PortFolio</h1>
               {darkmode ==="light" ?
