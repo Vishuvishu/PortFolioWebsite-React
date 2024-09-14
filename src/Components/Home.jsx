@@ -25,7 +25,7 @@ const Home = ({ show, setShow, darkmode, bgcolor, cross, setCross, handleclick, 
           />
         </div>
 
-        <div className='w-[53rem] h-[100vh] rounded-lg'>
+        <div className='w-[53rem] rounded-lg'>
           <Outlet />
         </div>
 
