@@ -12,6 +12,7 @@ import { SiFigma } from "react-icons/si";
 import profilephotoimg from "../Components/SocialLinks/ProfilePhoto.jpg"
 import "../Components/Global.css";
 import cv from "../Components/SocialLinks/Resume.pdf";
+import figma from "../Components/SocialLinks/figma.new.png";
 import { FaRegUser } from "react-icons/fa";
 import { PiNotepad } from "react-icons/pi";
 import { FaLaptopCode } from "react-icons/fa";
@@ -229,7 +230,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             }}
           /> */}
            <img
-             src="https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png"
+             src={figma}
             alt="Figma Logo"
             className="w-6 h-6"
           />
