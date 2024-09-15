@@ -8,7 +8,7 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
-import { AiFillMedium } from "react-icons/ai";
+import { FaMedium } from "react-icons/fa";
 import { SiFigma } from "react-icons/si";
 import profilephotoimg from "../Components/SocialLinks/ProfilePhoto.jpg"
 import "../Components/Global.css";
@@ -247,7 +247,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
               <a href="https://github.com/vishuvishu" target="#">
                 {" "}
 
-                <AiFillMedium className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
+                <FaMedium className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
  
                 />{" "}
               </a>
