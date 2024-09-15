@@ -215,8 +215,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
                 />{" "}
               </a>
             </div>
-          </div>
-          <div
+            <div
         className="figma w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500 bg-slate-100"
         style={{
           background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
@@ -224,13 +223,17 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
       >
         <a href="https://www.figma.com/@vishukishorbhai" target="#">
           <SiFigma
-            className={`text-2xl text-black fw-bold ${
-              bgcolor === "white" ? "text-black" : "text-white"
-            }`}
+            className="text-2xl"
+            style={{
+              color: "#F24E1E", // Figma's red color for the top part
+            }}
           />
         </a>
       </div>
 
+          </div>
+         
+           
           <div
             className="w-68  p-4 flex flex-col gap-2 rounded-lg relative top-8"
             style={{
