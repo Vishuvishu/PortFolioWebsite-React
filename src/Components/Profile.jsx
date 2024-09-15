@@ -244,7 +244,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
                 background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`
               }}
             >
-              <a href="https://github.com/vishuvishu" target="#">
+              <a href="https://medium.com/@FingerPrintBlogs" target="#">
                 {" "}
 
                 <FaMedium className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
