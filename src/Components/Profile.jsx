@@ -210,8 +210,12 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
               <a href="https://github.com/vishuvishu" target="#">
                 {" "}
 
-                <AiFillGithub className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
-
+{/*                 <AiFillGithub className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`} */}
+  <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+            alt="Figma Logo"
+            className="w-6 h-6"
+          />
                 />{" "}
               </a>
             </div>
