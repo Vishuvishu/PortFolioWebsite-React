@@ -210,12 +210,8 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
               <a href="https://github.com/vishuvishu" target="#">
                 {" "}
 
-{/*                 <AiFillGithub className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`} */}
-  <img
-            src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
-            alt="Figma Logo"
-            className="w-6 h-6"
-          />
+                <AiFillGithub className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
+ 
                 />{" "}
               </a>
             </div>
@@ -226,11 +222,16 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
         }}
       >
         <a href="https://www.figma.com/@vishukishorbhai" target="#">
-          <SiFigma
+{/*           <SiFigma
             className="text-2xl"
             style={{
               color: "#F24E1E", // Figma's red color for the top part
             }}
+          /> */}
+           <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+            alt="Figma Logo"
+            className="w-6 h-6"
           />
         </a>
       </div>
