@@ -229,7 +229,6 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             }}
           /> */}
            <img
-{/*             src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" */}
              src="https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png"
             alt="Figma Logo"
             className="w-6 h-6"
