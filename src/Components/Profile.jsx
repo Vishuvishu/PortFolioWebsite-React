@@ -232,7 +232,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
            <img
              src={figma}
             alt="Figma Logo"
-             className=" bg-cover "
+             className=" bg-cover w-6 h-6"
           />
   
         </a>
