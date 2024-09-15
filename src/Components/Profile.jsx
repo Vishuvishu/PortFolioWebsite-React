@@ -8,7 +8,7 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
-
+import { SiFigma } from "react-icons/si";
 import profilephotoimg from "../Components/SocialLinks/ProfilePhoto.jpg"
 import "../Components/Global.css";
 import cv from "../Components/SocialLinks/Resume.pdf";
@@ -216,6 +216,20 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
               </a>
             </div>
           </div>
+          <div
+        className="figma w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500 bg-slate-100"
+        style={{
+          background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
+        }}
+      >
+        <a href="https://www.figma.com/@vishukishorbhai" target="#">
+          <SiFigma
+            className={`text-2xl text-black fw-bold ${
+              bgcolor === "white" ? "text-black" : "text-white"
+            }`}
+          />
+        </a>
+      </div>
 
           <div
             className="w-68  p-4 flex flex-col gap-2 rounded-lg relative top-8"
