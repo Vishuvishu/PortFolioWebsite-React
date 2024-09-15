@@ -238,20 +238,20 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
   
         </a>
       </div>
-<div
-    className="medium w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-green-500 bg-slate-100"
-    style={{
-      background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
-    }}
-  >
-    <a href="https://medium.com/@FingerPrintBlogs" target="#">
-      <AiFillMedium
-        className={`text-2xl text-black fw-bold ${
-          bgcolor === "white" ? "text-black" : "text-white"
-        }`}
-      />
-    </a>
-  </div>
+            <div
+              className="insta w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500  bg-slate-100"
+              style={{
+                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`
+              }}
+            >
+              <a href="https://github.com/vishuvishu" target="#">
+                {" "}
+
+                <AiFillMedium className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
+ 
+                />{" "}
+              </a>
+            </div>
           </div>
          
            
