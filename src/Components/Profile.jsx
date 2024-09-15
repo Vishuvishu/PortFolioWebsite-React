@@ -8,6 +8,7 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
+import { AiFillMedium } from "react-icons/ai";
 import { SiFigma } from "react-icons/si";
 import profilephotoimg from "../Components/SocialLinks/ProfilePhoto.jpg"
 import "../Components/Global.css";
@@ -243,7 +244,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
       background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
     }}
   >
-    <a href="https://medium.com/@yourusername" target="#">
+    <a href="https://medium.com/@FingerPrintBlogs" target="#">
       <AiFillMedium
         className={`text-2xl text-black fw-bold ${
           bgcolor === "white" ? "text-black" : "text-white"
