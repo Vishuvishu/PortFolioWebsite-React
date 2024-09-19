@@ -40,8 +40,10 @@ function App() {
       setBgcolor("black");
     } else {
       setDarkmode("light");
-      document.body.style.backgroundImage =
-        "url(./Components/SocialLinks/background.jpg)";
+            document.body.style.backgroundImage = "url(https://github.com/Vishuvishu/Storage_repo/blob/main/Images/2%20(1).png)";
+
+      // document.body.style.backgroundImage =
+        // "url(./Components/SocialLinks/background.jpg)";
       setBgcolor("white");
     }
   };
