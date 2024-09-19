@@ -33,17 +33,18 @@ function App() {
   const handleDarkMode = () => {
     if (darkmode === "light") {
       setDarkmode("dark");
-      document.body.style.backgroundImage = "url(https://github.com/Vishuvishu/Storage_repo/blob/main/Images/2%20(1).png)";
-        // "url(https://i.pinimg.com/564x/37/24/db/3724db00677625d737f96f8faf8e31de.jpg)";
+      document.body.style.backgroundImage =
+      // "url(https://github.com/Vishuvishu/Storage_repo/blob/main/Images/2%20(1).png)";
+        "url(https://i.pinimg.com/564x/37/24/db/3724db00677625d737f96f8faf8e31de.jpg)";
       
       document.body.style.width = "100%";
       setBgcolor("black");
     } else {
       setDarkmode("light");
-            document.body.style.backgroundImage = "url(https://github.com/Vishuvishu/Storage_repo/blob/main/Images/2%20(1).png)";
+            // document.body.style.backgroundImage = "url(https://github.com/Vishuvishu/Storage_repo/blob/main/Images/2%20(1).png)";
 
-      // document.body.style.backgroundImage =
-        // "url(./Components/SocialLinks/background.jpg)";
+      document.body.style.backgroundImage =
+        "url(./Components/SocialLinks/background.jpg)";
       setBgcolor("white");
     }
   };
