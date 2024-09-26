@@ -9,35 +9,39 @@ const Home = ({ show, setShow, darkmode, bgcolor, cross, setCross, handleclick, 
 
   return (
     <>
+<div className='w-full h-[100vh] m-10 homepage flex flex-col justify-center items-center'>
+  <div className='w-full sm:w-auto md:w-auto flex sm:flex-wrap md:flex-wrap sm:gap-3 md:gap-2 justify-around items-center'>
+    
+    {/* Profile Component */}
+    <div className=''>
+      <Profile
+        show={show}
+        setShow={setShow}
+        darkmode={darkmode}
+        bgcolor={bgcolor}
+        cross={cross}
+        setCross={setCross}
+        handleclick={handleclick}
+        handleremove={handleremove}
+      />
+    </div>
 
-      <div className='w-full h-[100vh] m-10 homepage flex sm:flex-wrap md:flex-wrap sm:gap-3 md:gap-2 sm:justify-center md:justify-center justify-around items-center'>
-        <div className=''>
-          <Profile
-            show={show}
-            setShow={setShow}
-            darkmode={darkmode}
-            bgcolor={bgcolor}
-            cross={cross}
-            setCross={setCross}
-            handleclick={handleclick}
-            handleremove={handleremove}
+    {/* Outlet Component */}
+    <div className='w-full sm:w-[53rem] md:w-[53rem] h-[120vh] rounded-lg overflow-auto'>
+      <Outlet />
+    </div>
 
-          />
-        </div>
-
-        <div className='w-[53rem] rounded-lg'>
-          <Outlet />
-        </div>
-
-        <div>
-          <Navbar
-            show={show}
-            setShow={setShow}
-            darkmode={darkmode}
-            bgcolor={bgcolor}
-          />
-        </div>
-      </div>
+    {/* Navbar Component */}
+    <div>
+      <Navbar
+        show={show}
+        setShow={setShow}
+        darkmode={darkmode}
+        bgcolor={bgcolor}
+      />
+    </div>
+  </div>
+</div>
 
     </>
   )
