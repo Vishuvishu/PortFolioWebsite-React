@@ -7,24 +7,24 @@ const handlecolorName = () => {
   let naam = document.getElementById("name");
   let borderColorName = document.getElementById("borderColorName");
   console.log(naam);
-  naam.style.color = "#FE7878";
-  borderColorName.style.borderBottom = "1px solid #FE7878";
+  naam.style.color = "#9D8640";
+  borderColorName.style.borderBottom = "1px solid #9D8640";
   borderColorName.style.height = "1.5rem";
 };
 
 const handlecolorEmail = () => {
   let email = document.getElementById("email");
   let borderColorEmail = document.getElementById("borderColorEmail");
-  email.style.color = "#1B74E4";
-  borderColorEmail.style.borderBottom = "1px solid #1B74E4";
+  email.style.color = "#9D8640";
+  borderColorEmail.style.borderBottom = "1px solid #9D8640";
   borderColorEmail.style.height = "1.5rem";
 };
 
 const handlecolorMessage = () => {
   let message = document.getElementById("message");
   let borderColorMessage = document.getElementById("borderColorMessage");
-  message.style.color = "#CE65F3";
-  borderColorMessage.style.borderBottom = "1px solid #CE65F3";
+  message.style.color = "#9D8640";
+  borderColorMessage.style.borderBottom = "1px solid #9D8640";
   borderColorMessage.style.height = "1.5rem";
 };
 
@@ -46,30 +46,30 @@ const Contact = ({ bgcolor, darkmode }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     const { name, email, message } = formData;
-    
+
     // Construct the mailto link
     // const mailtoLink = `mailto:vishunkkb.dev@gmail.com?subject=Message from ${name} (${email})&body=${encodeURIComponent(message)}`;
     const mailtoLink = `mailto:youremail@example.com?subject=${encodeURIComponent(
       "Subject"
     )}&body=${encodeURIComponent("Your message body")}`;
-    
+
     // Open Gmail with the mailto link
     window.location.href = mailtoLink;
 
   };
-  
+
   return (
     <>
       {/* <div className="about p-3 relative aboutus"> */}
       <div
 
-className={` ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
-          } p-10 rounded-lg flex flex-col gap-10`}
+        className={` border-solid border-2 border-[#B7A261] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"
+          } ml-10 mr-10 mb-10 p-10 rounded-lg flex flex-col gap-10`}
       >
         <h1
-          className="text-3xl font-bold"
+          className="text-2xl font-bold"
           style={{ color: `${bgcolor === "white" ? "#000000" : "white"}` }}
         >
           Contact
@@ -83,15 +83,15 @@ className={` ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
         >
           <div className="my-3">
             <h1
-              className="text-2xl "
+              className="text-1xl "
               style={{
                 color: `${bgcolor === "white" ? "#000000" : "#A6A6A6"}`,
               }}
             >
-              I'm Always Open To Discuss Product
+              I'm Always Open To Discuss Projects
             </h1>{" "}
             <h1
-              className="text-2xl  font-bold"
+              className="text-1xl  font-bold"
               style={{
                 color: `${bgcolor === "white" ? "#000000" : "white"}`,
               }}
@@ -145,7 +145,7 @@ className={` ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
                 style={{
                   background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"
                     }`,
-                  color: `${bgcolor === "white" ? "#000000" : "#000000"}`,
+                  color: `${bgcolor === "white" ? "#000000" : "white"}`,
                 }}
                 onClick={handlecolorEmail}
                 value={formData.email}
@@ -175,7 +175,7 @@ className={` ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
                 }}
                 value={formData.message}
                 onChange={handleChange}
-                required    
+                required
                 onClick={handlecolorMessage}
                 name="message"
                 id="borderColorMessage"
@@ -183,10 +183,10 @@ className={` ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
             </div>
 
             <button
-              className=" my-2 w-32 h-11 hover:bg-blue-500 hover:text-white font-bold rounded-lg btn-sumit border border-blue-500"
+              className=" my-2 w-32 h-11 mt-4 font-bold rounded-lg btn-sumit"
               style={{
-                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
-                color: `${bgcolor === "white" ? "#000000" : "white"}`,
+                background: `${bgcolor === "white" ? "#B7A261" : "#4B3D10"}`,
+                color: `${bgcolor === "white" ? "#ffffff" : "CCC0C0"}`,
               }}
               type="submit"
 

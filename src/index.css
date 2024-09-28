@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-border {
+    /* Transparent border */
+    background: linear-gradient(180deg, #0ACF83 0%, #A259FF 22%, #F24E1E 51%, #FF7262 77%, #1ABCFE 98%);
+    /* Gradient background */
+    background-clip: border-box;
+    /* Clip the background to the border */
+    border-radius: 8px;
+    display: flex;
+    /* Optional: round corners */
+
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+}
+
+/* .gradient-border .content {
+    background-color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+   
+} */
+
+
+
+.custom-element:hover {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), 1px 1px 1px rgb(164, 150, 118);
+    /* Small shadow + amber color */
+}
+
+
+
+.bg-white1 {
+    background-color: white;
+    /* Ensure content has a distinct background */
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    /* Match border's radius */
+
+}
+
+.bg-black1 {
+    background-color: black;
+    /* Ensure content has a distinct background */
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    /* Match border's radius */
+}
+
+/* styles.css */
+nav a:focus,
+nav div:focus {
+    outline: none;
+    /* Remove the outline on focus */
+}

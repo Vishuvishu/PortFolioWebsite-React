@@ -5,21 +5,21 @@ import css from "../Components/SocialLinks/social.png"
 import js from "../Components/SocialLinks/js.png"
 import react from "../Components/SocialLinks/react_original_logo_icon_146374.png"
 import nodejs from "../Components/SocialLinks/nodejs.png"
-import expressJs from "../Components/SocialLinks/express.png"
+import expressJs from "../Components/SocialLinks/Express.svg"
 import mongodb from "../Components/SocialLinks/mongodb_original_logo_icon_146424.png"
 import postman from "../Components/SocialLinks/postman_macos_bigsur_icon_189815.png"
-import git from "../Components/SocialLinks/social (1).png"
+import git from "../Components/SocialLinks/Git.png"
 import tailwind from "../Components/SocialLinks/icons8-tailwind-css-48.png"
 import github from "../Components/SocialLinks/github.png"
 import bootstrap from "../Components/SocialLinks/icons8-bootstrap-48.png"
-import flutter from "../Components/SocialLinks/flutter.svg"
-import firebase from "../Components/SocialLinks/FireBase.png"
-import mysql from "../Components/SocialLinks/MySql.png"
+import flutter from "../Components/SocialLinks/Flutter.svg"
+import firebase from "../Components/SocialLinks/FireBase.svg"
+import mysql from "../Components/SocialLinks/MySql.svg"
 import tablue from "../Components/SocialLinks/Tablue.jpeg"
 import shopify from "../Components/SocialLinks/Shopify.webp"
-import android from "../Components/SocialLinks/Android.jpg"
-import docker from "../Components/SocialLinks/Docker.png"
-import figma from "../Components/SocialLinks/Figma.png"
+import android from "../Components/SocialLinks/Android.svg"
+import docker from "../Components/SocialLinks/Docker.svg"
+import figma from "../Components/SocialLinks/figma.new.png"
 import powerbi from "../Components/SocialLinks/powerbi.png"
 
 
@@ -61,44 +61,41 @@ const Skills = ({ bgcolor, darkmode }) => {
   return (
     <>
       <div
-        className={` ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
-          } p-10 rounded-lg flex flex-col gap-10 `}
+        className={` border-solid border-2 border-[#B7A261] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"
+          } ml-10 mr-10 p-10 rounded-lg flex flex-col gap-5 mb-10`}
       >
         <h1
-          className={`text-3xl font-bold ${bgcolor === "white" ? "text-black" : "text-white"
+          className={`text-2xl font-bold ${bgcolor === "white" ? "text-black" : "text-white"
             }`}
         >
           Tech Stack
         </h1>
 
-        <div className="w-full flex flex-wrap gap-4">
+        <div className="w-full flex flex-wrap gap-y-[60px] gap-x-7">
           {
             skills.map((curr, i) =>
-              <div key={i} className="w-[7rem] text-center h-[7rem] rounded-full flex flex-col">
-                <img src={curr.png} className="w-full p-5 ß" />
-                <h1 className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"
-                  }`}>{curr.skill}</h1>
+              <div key={i} className=" text-center rounded-lg w-[70px] h-[70px] rounded-lg shadow-custom border border-[#B7A261] ">
+                <img src={curr.png} className="w-full p-2 mb-3 " />
+                <h1 className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>{curr.skill}</h1>
               </div>)
           }
         </div>
 
-
+        {/* cfccjcnwb nnjnjkjkknkjnjjnknjjknnjkjkjnnknknnknnnnnnjjknkjnnnnjkkjkkjknjnnkjnjnnnnnnnnkjnknnknknkjknjnjnnjnnjjkjknkjjknjnkjnkjnjnjnnjnjnjnk */}
 
         <h1
-          className={`text-3xl font-bold ${bgcolor === "white" ? "text-black" : "text-white"
+          className={`text-2xl font-bold pt-[56px] ${bgcolor === "white" ? "text-black" : "text-white"
             }`}
         >
           Tools & Software
         </h1>
 
-
-        <div className="w-full flex flex-wrap gap-4">
+        <div className="w-full flex flex-wrap gap-y-[60px] gap-x-7">
           {
             otherSkills.map((curr, i) =>
-              <div key={i} className="w-[7rem] text-center h-[7rem] rounded-full flex flex-col">
-                <img src={curr.png} className="w-full p-5" />
-                <h1 className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"
-                  }`}>{curr.skill}</h1>
+              <div key={i} className="text-center rounded-lg w-[70px] h-[70px] shadow-custom border border-[#B7A261] ">
+                <img src={curr.png} className="w-full h-full p-2 mb-3 object-contain" />
+                <h1 className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>{curr.skill}</h1>
               </div>)
           }
         </div>

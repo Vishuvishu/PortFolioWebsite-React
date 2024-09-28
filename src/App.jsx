@@ -10,8 +10,7 @@ import Projects from "./Components/Projects";
 import ForMobile from "./Components/ForMobile";
 import Skills from "./Components/Skills";
 import Home from "./Components/Home";
-import backlight from "./Components/SocialLinks/background.jpg";
-import backdark from "./Components/SocialLinks/Background2.jpg";
+
 function App() {
 
   const [show, setShow] = useState(false);
@@ -33,76 +32,76 @@ function App() {
   const handleDarkMode = () => {
     if (darkmode === "light") {
       setDarkmode("dark");
-      document.body.style.backgroundImage =
-      // "url(https://github.com/Vishuvishu/Storage_repo/blob/main/Images/2%20(1).png)";
-        "url(https://i.pinimg.com/564x/37/24/db/3724db00677625d737f96f8faf8e31de.jpg)";
-      
+      document.body.style.background = "#131313"
+
       document.body.style.width = "100%";
       setBgcolor("black");
     } else {
       setDarkmode("light");
-            // document.body.style.backgroundImage = "url(https://github.com/Vishuvishu/Storage_repo/blob/main/Images/2%20(1).png)";
 
-      document.body.style.backgroundImage =
-        "url(./Components/SocialLinks/background.jpg)";
+
+      document.body.style.background = "#FEF6DD";
       setBgcolor("white");
     }
   };
   return (
     <>
       <BrowserRouter>
-        <ForMobile
-          show={show}
-          setShow={setShow}
-          darkmode={darkmode}
-          setDarkmode={setDarkmode}
-          handleDarkMode={handleDarkMode}
-          cross={cross}
-          setCross={setCross}
-          handleclick={handleclick}
-          handleremove={handleremove}
-        />
-        <Routes>
-          <Route path="/" element={<Home
+        <div div className="flex flex-col justify-center gap-20">
+          <ForMobile
             show={show}
             setShow={setShow}
             darkmode={darkmode}
             setDarkmode={setDarkmode}
-            bgcolor={bgcolor}
             handleDarkMode={handleDarkMode}
             cross={cross}
             setCross={setCross}
             handleclick={handleclick}
             handleremove={handleremove}
+          />
+          <Routes>
+            <Route path="/" element={<Home
+              show={show}
+              setShow={setShow}
+              darkmode={darkmode}
+              setDarkmode={setDarkmode}
+              bgcolor={bgcolor}
+              handleDarkMode={handleDarkMode}
+              cross={cross}
+              setCross={setCross}
+              handleclick={handleclick}
+              handleremove={handleremove}
 
-          />}>
-            <Route
-              index
-              element={<About bgcolor={bgcolor} darkmode={darkmode} />}
-            />
+            />}>
+              <Route
+                index
+                element={<About bgcolor={bgcolor} darkmode={darkmode} />}
+              />
 
-            <Route
-              path="/Experiance"
-              element={<Experiance bgcolor={bgcolor} darkmode={darkmode} />}
-            />
+              <Route
+                path="/Experiance"
+                element={<Experiance bgcolor={bgcolor} darkmode={darkmode} />}
+              />
 
-            <Route
-              path="/Contact"
-              element={<Contact bgcolor={bgcolor} darkmode={darkmode} />}
-            />
+              <Route
+                path="/Contact"
+                element={<Contact bgcolor={bgcolor} darkmode={darkmode} />}
+              />
 
-            <Route
-              path="/Projects"
-              element={<Projects bgcolor={bgcolor} darkmode={darkmode} />}
-            />
+              <Route
+                path="/Projects"
+                element={<Projects bgcolor={bgcolor} darkmode={darkmode} />}
+              />
 
-            <Route
-              path="/Skills"
-              element={<Skills bgcolor={bgcolor} darkmode={darkmode} />}
-            />
-          </Route>
-        </Routes>
+              <Route
+                path="/Skills"
+                element={<Skills bgcolor={bgcolor} darkmode={darkmode} />}
+              />
+            </Route>
+          </Routes>
+        </div>
       </BrowserRouter>
+
     </>
   );
 }

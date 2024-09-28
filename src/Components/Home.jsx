@@ -9,39 +9,39 @@ const Home = ({ show, setShow, darkmode, bgcolor, cross, setCross, handleclick, 
 
   return (
     <>
-<div className='w-full h-[100vh] m-10 homepage flex flex-col justify-center items-center'>
-  <div className='w-full sm:w-auto md:w-auto flex sm:flex-wrap md:flex-wrap sm:gap-3 md:gap-2 justify-around items-center'>
-    
-    {/* Profile Component */}
-    <div className=''>
-      <Profile
-        show={show}
-        setShow={setShow}
-        darkmode={darkmode}
-        bgcolor={bgcolor}
-        cross={cross}
-        setCross={setCross}
-        handleclick={handleclick}
-        handleremove={handleremove}
-      />
-    </div>
+      <div className='w-full m-1  homepage flex flex-col  items-center'>
+        <div className='w-full sm:w-auto md:w-auto flex sm:flex-wrap md:flex-wrap sm:gap-3 md:gap-2 justify-center items-start'>
 
-    {/* Outlet Component */}
-    <div className='w-full sm:w-[53rem] md:w-[53rem] h-[120vh] rounded-lg overflow-auto'>
-      <Outlet />
-    </div>
+          {/* Profile Component */}
+          <div className=''>
+            <Profile
+              show={show}
+              setShow={setShow}
+              darkmode={darkmode}
+              bgcolor={bgcolor}
+              cross={cross}
+              setCross={setCross}
+              handleclick={handleclick}
+              handleremove={handleremove}
+            />
+          </div>
 
-    {/* Navbar Component */}
-    <div>
-      <Navbar
-        show={show}
-        setShow={setShow}
-        darkmode={darkmode}
-        bgcolor={bgcolor}
-      />
-    </div>
-  </div>
-</div>
+          {/* Outlet Component */}
+          <div className='w-full sm:w-[53rem] md:w-[53rem] rounded-lg overflow-auto'>
+            <Outlet />
+          </div>
+
+          {/* Navbar Component */}
+          <div>
+            <Navbar
+              show={show}
+              setShow={setShow}
+              darkmode={darkmode}
+              bgcolor={bgcolor}
+            />
+          </div>
+        </div>
+      </div>
 
     </>
   )

@@ -1,26 +1,22 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { CiMobile4 } from "react-icons/ci";
+import { CiMobile1, CiMobile4 } from "react-icons/ci";
 import { IoLocationSharp } from "react-icons/io5";
-import { AiTwotoneMail } from "react-icons/ai";
-import { BsCalendarDate } from "react-icons/bs";
-import { MdOutlineFileDownload } from "react-icons/md";
-import { AiOutlineEye } from "react-icons/ai";
+import { BsMedium } from "react-icons/bs";
+import { MdDateRange, MdOutlineFileDownload } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
-import { FaMedium } from "react-icons/fa";
-import { SiFigma } from "react-icons/si";
 import profilephotoimg from "../Components/SocialLinks/ProfilePhoto.jpg"
 import "../Components/Global.css";
-import cv from "../Components/SocialLinks/Resume.pdf";
 import figma from "../Components/SocialLinks/figma.new.png";
 import { FaRegUser } from "react-icons/fa";
 import { PiNotepad } from "react-icons/pi";
 import { FaLaptopCode } from "react-icons/fa";
 import { TiContacts } from "react-icons/ti";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { LiaBlogSolid } from "react-icons/lia";
 import { NavLink } from "react-router-dom";
+import "../index.css";
+import { LuMail } from "react-icons/lu";
 
 const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
 
@@ -33,8 +29,8 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
     <>
       {show ? (
         <div
-          className={`${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
-            } lg:w-11/12  md:w-8/12 sm:w-11/12 absolute sm:top-50 z-20`}
+          className={`${darkmode === "dark" ? `bg-${bgcolor} ` : `bg-white`
+            } lg:w-11/12  md:w-8/12 sm:w-11/12  sm:top-50 z-20 fixed `}
         >
           <NavLink to="/">
             <div
@@ -149,41 +145,36 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
 
       <div className="w-full flex justify-around">
         <div
-          className={`lg:w-80 sm:w-96 h-12/12 rounded-lg p-10 flex flex-col items-center relative gap-8  ${darkmode === "dark" ? "bg-black" : "bg-white"
+          className={`lg:w-80 sm:w-96 h-12/12 rounded-lg p-10 flex flex-col items-center relative gap-8 border-solid border-2 border-[#B7A261] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"
             }`}
         >
           <div className="w-40 h-40 rounded-full  image ">
-            <img src={profilephotoimg} className="w-screen rounded-lg w-40 h-50 object-cover border-solid border-2 border-white " />
+            <img src={profilephotoimg} className={`w-screen rounded-lg w-40 h-50 object-cover border-solid border-4 border-[#B7A261] `} />
           </div>
           <h1
-            className={`text-2xl font-bold relative lg:top-20 sm:top-24 ${bgcolor === "white" ? "text-black" : "text-white"
+            className={`text-xl font-bold relative lg:top-20 sm:top-24 ${bgcolor === "white" ? "text-black" : "text-[#CCC0C0]"
               }`}
           >
             Vishu K Bhingradiya
           </h1>
           <div
-            className="passion h-8 p-2 relative lg:top-12 sm:top-20 inline-block"
+            className="passion p-2 mt-2 relative lg:top-12 sm:top-20 text-sm w-70"
             style={{
-              background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
+              color: `${bgcolor === "white" ? "#000000" : "#CCC0C0"}`,
             }}
           >
-            <h1
-              className="text-center whitespace-nowrap text-sm"
-              style={{
-                color: `${bgcolor === "white" ? "#000000" : "#A6A6A6"}`,
-              }}
-            >
-              MERN + Flutter Dev.
-            </h1>
+            <ul style={{ listStyleType: 'square', paddingLeft: '20px' }}> {/* Explicitly set bullet points and indentation */}
+              <li style={{ marginBottom: '5px' }}>Flutter Mobile Developer</li>
+              <li style={{ marginBottom: '5px' }} >MERN Web - Full Stack Developer</li>
+              <li >UI/UX Designer</li>
+            </ul>
           </div>
 
 
-          <div className=" w-96 p-2 flex gap-2 justify-center relative lg:top-10 sm:top-14">
+
+          <div className=" flex gap-2 justify-center relative lg:top-6 sm:top-8">
             <div
-              className="insta w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500  bg-slate-100"
-              style={{
-                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
-              }}
+              className={`insta w-8 h-8  flex justify-center items-center rounded-lg border border-[#E77975] hover:shadow-sm ${darkmode === "dark" ? "hover:shadow-white" : "hover:shadow-black"} transition-colors duration-500`}
             >
               <a href="https://www.instagram.com/vishu_bhingradiya/" target="#">
                 {" "}
@@ -192,10 +183,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             </div>
 
             <div
-              className="insta w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500  bg-slate-100"
-              style={{
-                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
-              }}
+              className={`insta w-8 h-8  flex justify-center items-center rounded-lg border border-[#3662E3] hover:shadow-sm ${darkmode === "dark" ? "hover:shadow-white" : "hover:shadow-black"} transition-colors duration-500`}
             >
               <a href="https://in.linkedin.com/in/vishu-k-bhingradiya-667668229">
                 {" "}
@@ -204,74 +192,71 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             </div>
 
             <div
-              className="insta w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500  bg-slate-100"
-              style={{
-                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`
-              }}
+              className={`insta w-8 h-8  flex justify-center items-center rounded-lg border ${bgcolor === "white" ? "border-[#000000]" : "border-[#CCC0C0]"} border-[#000000] hover:shadow-sm ${darkmode === "dark" ? "hover:shadow-white" : "hover:shadow-black"}  `}
             >
               <a href="https://github.com/vishuvishu" target="#">
                 {" "}
 
                 <AiFillGithub className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
- 
+
                 />{" "}
               </a>
             </div>
             <div
-        className="figma w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500 bg-slate-100"
-        style={{
-          background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
-        }}
-      >
-        <a href="https://www.figma.com/@vishukishorbhai" target="#">
-{/*           <SiFigma
+              className={`figma  flex justify-center items-center rounded-lg border `}
+              class="gradient-border custom-element"
+
+            >
+              <div className={bgcolor === "white" ? "bg-white1" : "bg-black1"}>
+
+                <a href="https://www.figma.com/@vishukishorbhai" target="#">
+                  {/*           <SiFigma
             className="text-2xl"
             style={{
               color: "#F24E1E", // Figma's red color for the top part
             }}
           /> */}
-           <img
-             src={figma}
-            alt="Figma Logo"
-             className=" bg-cover w-[4.5] h-6"
-          />
-  
-        </a>
-      </div>
+                  <img
+                    src={figma}
+                    alt="Figma Logo"
+                    className=" bg-cover w-[4.5] h-6"
+                  />
+
+                </a>
+              </div>
+            </div>
             <div
-              className="insta w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500  bg-slate-100"
-              style={{
-                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`
-              }}
+              className={` w-8 h-8 flex justify-center items-center rounded-lg border  ${bgcolor === "white" ? "border-[#000000]" : "border-[#CCC0C0]"} hover:bg-gold hover:shadow-sm ${darkmode === "dark" ? "hover:shadow-white" : "hover:shadow-black"}  `}
+
             >
               <a href="https://medium.com/@FingerPrintBlogs" target="#">
                 {" "}
 
-                <FaMedium className={`text-2xl text-black  fw-bold  ${bgcolor === "white" ? "text-black" : "text-white"}`}
- 
+                <BsMedium className={`text-2xl text-black fw-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}
+
                 />{" "}
               </a>
             </div>
           </div>
-         
-           
+
+
           <div
-            className="w-68  p-4 flex flex-col gap-2 rounded-lg relative top-8"
+            className="w-68  p-4 flex flex-col gap-2 rounded-lg relative top-5"
             style={{
-              background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
+              background: `${bgcolor === "white" ? "#F9F6EA" : "#3B3729"}`,
             }}
           >
             <div
-              className={`flex  items-center gap-2 ${bgcolor === "white"
-                ? "border-b border-grey-200 p-1"
+              className={`flex  items-center gap-2 pb-1.5 ${bgcolor === "white"
+                ? "border-b border-grey-200"
                 : "border-b border-slate-500"
                 }`}
             >
               <div
-                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-white" : "bg-black"
-                  } rounded-lg  hover:bg-black`}
+                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-[#D9D9D9]" : "bg-[#000000]"
+                  } rounded-lg  `}
               >
-                <CiMobile4 className="text-2xl text-[#64748b] " />
+                <CiMobile1 className={`text-2xl ${bgcolor == "white" ? "text-[#000000]" : "text-[#CCC0C0]"} `} />
               </div>
 
               <div className="phone">
@@ -287,16 +272,16 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             </div>
 
             <div
-              className={`flex  items-center gap-2 ${bgcolor === "white"
-                ? "border-b border-grey-200 p-1"
+              className={`flex  items-center gap-2 pb-1.5 ${bgcolor === "white"
+                ? "border-b border-grey-200"
                 : "border-b border-slate-500"
                 }`}
             >
               <div
-                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-white" : "bg-black"
-                  } rounded-lg  hover:bg-black `}
+                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-[#D9D9D9]" : "bg-[#000000]"
+                  } rounded-lg  `}
               >
-                <AiTwotoneMail className="text-2xl text-[#64748b] " />
+                <LuMail className={`text-2xl text-[#64748b] ${bgcolor == "white" ? "text-[#000000]" : "text-[#CCC0C0]"} `} />
               </div>
 
               <div className="phone">
@@ -312,16 +297,16 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             </div>
 
             <div
-              className={`flex  items-center gap-2 ${bgcolor === "white"
-                ? "border-b border-grey-200 p-1"
+              className={`flex  items-center gap-2 pb-1.5 ${bgcolor === "white"
+                ? "border-b border-grey-200"
                 : "border-b border-slate-500"
                 }`}
             >
               <div
-                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-white" : "bg-black"
-                  } rounded-lg  hover:bg-black `}
+                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-[#D9D9D9]" : "bg-[#000000]"
+                  } rounded-lg  `}
               >
-                <IoLocationSharp className="text-2xl text-[#64748b] " />
+                <IoLocationSharp className={`text-2xl text-[#64748b] ${bgcolor == "white" ? "text-[#000000]" : "text-[#CCC0C0]"}`} />
               </div>
 
               <div className="phone">
@@ -335,16 +320,13 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             </div>
 
             <div
-              className={`flex  items-center gap-2 ${bgcolor === "white"
-                ? "border-b border-grey-200 p-1"
-                : "border-b border-slate-500"
-                }`}
+              className={`flex  items-center gap-2 `}
             >
               <div
-                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-white" : "bg-black"
-                  } rounded-lg  hover:bg-black`}
+                className={`phone w-10 h-10 p-2 flex items-center justify-center ${bgcolor == "white" ? "bg-[#D9D9D9]" : "bg-[#000000]"
+                  } rounded-lg  `}
               >
-                <BsCalendarDate className="text-2xl text-[#64748b] " />
+                <MdDateRange className={`text-2xl text-[#64748b] ${bgcolor == "white" ? "text-[#000000]" : "text-[#CCC0C0]"}`} />
               </div>
 
               <div className="phone">
@@ -358,13 +340,13 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             </div>
           </div>
           <div className="flex relative top-5">
-            <button className={`${bgcolor === "white" ? "bg-black text-white" : "bg-white text-black"}   flex items-center rounded-lg justify-center p-2 text-md text-nowrap w-36 h-10`}>
+            <button className={`${bgcolor === "white" ? "bg-[#B7A261]" : "bg-[#C2B293] "}   flex items-center rounded-lg justify-center p-2 text-lg text-nowrap w-36 h-10`}>
               {/* <a href={cv} download="Resume" className="flex"> */}
-              <a href={"https://drive.google.com/file/d/1JVNneRNr845-oGLpgPgjUsmkEmH5Q0e-/view?usp=sharing"} className="flex gap-2">
+              <a href={"https://drive.google.com/file/d/1JVNneRNr845-oGLpgPgjUsmkEmH5Q0e-/view?usp=sharing"} className="flex gap-2 text-[#3B3729] ">
 
-                <AiOutlineEye className="text-2xl " />
+
                 {" "}
-                <p>View CV</p>
+                <p><b>View Resume</b></p>
               </a>
             </button>
           </div>

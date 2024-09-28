@@ -6,73 +6,71 @@ import { TiContacts } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
-
 const Navbar = ({ bgcolor, darkmode }) => {
   return (
     <>
-      <nav className="lg:block sm:hidden h-full">
-        <div className={`w-24 rounded-lg  ${darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`} p-5 flex flex-col items-center gap-2 me-5`}>
-          <NavLink to="/">
-            {" "}
-            <div
-              className="w-16 rounded-lg flex flex-col justify-center items-center p-2 bg-slate-100"
-              style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
-
-            >
-              <FaRegUser className="text-2xl" />
-              <h1 className="text-sm">About</h1>
-            </div>{" "}
+      <nav className={`lg:block sm:hidden h-full border-2 border-[#B7A261] mt-40 rounded-lg ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"} `}>
+        <div
+          className={`w-24 rounded-lg p-5 flex flex-col items-center gap-2`}
+        >
+          <NavLink to="/" exact>
+            {({ isActive }) => (
+              <div
+                className={`w-16 rounded-lg flex flex-col justify-center items-center p-2 ${isActive ? "bg-[#B7A261] text-[#000000]" : bgcolor === "white" ? "bg-[#FEF6DD] text-black" : "bg-[#3B3729] text-[#A89D9D]"
+                  } focus:outline-none `}
+              >
+                <FaRegUser className="text-2xl" />
+                <h1 className="text-xs">About</h1>
+              </div>
+            )}
           </NavLink>
 
           <NavLink to="/Experiance">
-            {" "}
-            <div
-              className="w-16  rounded-lg flex flex-col  items-center p-2"
-              style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
-            >
-              <PiNotepad className="text-2xl" />{" "}
-              <h1 className="text-sm">Experiance</h1>
-            </div>
+            {({ isActive }) => (
+              <div
+                className={`w-16 rounded-lg flex flex-col items-center p-2 ${isActive ? "bg-[#B7A261] text-[#000000]" : bgcolor === "white" ? "bg-[#FEF6DD] text-black" : "bg-[#3B3729] text-[#A89D9D]"
+                  } focus:outline-none`}
+              >
+                <PiNotepad className="text-2xl" />
+                <h1 className="text-xs">Experiance</h1>
+              </div>
+            )}
           </NavLink>
+
           <NavLink to="/Projects">
-            <div
-              className="w-16 rounded-lg flex flex-col justify-center items-center p-2"
-              style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
-            >
-              <FaLaptopCode className="text-2xl" />
-              <h1 className="text-sm">Projects</h1>
-            </div>
+            {({ isActive }) => (
+              <div
+                className={`w-16 rounded-lg flex flex-col justify-center items-center p-2 ${isActive ? "bg-[#B7A261] text-[#000000]" : bgcolor === "white" ? "bg-[#FEF6DD] text-black" : "bg-[#3B3729] text-[#A89D9D]"
+                  } focus:outline-none`}
+              >
+                <FaLaptopCode className="text-2xl" />
+                <h1 className="text-xs">Projects</h1>
+              </div>
+            )}
           </NavLink>
+
           <NavLink to="/Skills">
-
-            <div
-              className="w-16  rounded-lg flex flex-col justify-center items-center p-2"
-              style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
-            >
-              <AiOutlineSafetyCertificate className="text-2xl" />
-              <h1 className="text-sm p-1">Skills</h1>
-            </div>
-
+            {({ isActive }) => (
+              <div
+                className={`w-16 rounded-lg flex flex-col justify-center items-center p-2 ${isActive ? "bg-[#B7A261] text-[#000000]" : bgcolor === "white" ? "bg-[#FEF6DD] text-black" : "bg-[#3B3729] text-[#A89D9D]"
+                  } focus:outline-none`}
+              >
+                <AiOutlineSafetyCertificate className="text-2xl" />
+                <h1 className="text-xs p-1">Skills</h1>
+              </div>
+            )}
           </NavLink>
-          {/* <NavLink to="/Projects">
-            <div
-              className="w-16 rounded-lg flex flex-col justify-center items-center p-2"
-              style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
-            >
-              <FaLaptopCode className="text-2xl" />
-              <h1 className="text-sm">Projects</h1>
-            </div>
-          </NavLink> */}
-
 
           <NavLink to="/Contact">
-            <div
-              className="w-16 rounded-lg flex flex-col justify-center items-center p-2"
-              style={{ color: `${bgcolor === "white" ? "black" : "#A6A6A6"}`, background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}` }}
-            >
-              <TiContacts className="text-2xl" />
-              <h1 className="text-sm">Contact</h1>
-            </div>
+            {({ isActive }) => (
+              <div
+                className={`w-16 rounded-lg flex flex-col justify-center items-center p-2 ${isActive ? "bg-[#B7A261] text-[#000000]" : bgcolor === "white" ? "bg-[#FEF6DD] text-black" : "bg-[#3B3729] text-[#A89D9D]"
+                  } focus:outline-none`}
+              >
+                <TiContacts className="text-2xl" />
+                <h1 className="text-xs">Contact</h1>
+              </div>
+            )}
           </NavLink>
         </div>
       </nav>
