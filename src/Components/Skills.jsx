@@ -61,7 +61,7 @@ const Skills = ({ bgcolor, darkmode }) => {
   return (
     <>
       <div
-        className={` border-solid border-2 border-[#B7A261] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"
+        className={` border-solid border-[3px]  ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white border-[#B7A261]"
           } ml-10 mr-10 p-10 rounded-lg flex flex-col gap-5 mb-10`}
       >
         <h1

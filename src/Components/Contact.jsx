@@ -65,7 +65,7 @@ const Contact = ({ bgcolor, darkmode }) => {
       {/* <div className="about p-3 relative aboutus"> */}
       <div
 
-        className={` border-solid border-2 border-[#B7A261] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"
+        className={` border-solid border-[3px] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white  border-[#B7A261]"
           } ml-10 mr-10 mb-10 p-10 rounded-lg flex flex-col gap-10`}
       >
         <h1

@@ -12,7 +12,7 @@ const Projects = ({ bgcolor, darkmode }) => {
   return (
     <>
       <div className="ml-10 mr-10 mb-10 ">
-        <div className={`border-solid border-2 border-[#B7A261] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"
+        <div className={`border-solid border-[3px] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white border-[#B7A261]"
           }  p-10 rounded-lg`}>
           <h1 className={`text-2xl font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>Projects</h1>
           <div className="flex gap-5 flex-wrap my-5">

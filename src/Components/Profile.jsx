@@ -145,7 +145,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
 
       <div className="w-full flex justify-around">
         <div
-          className={`lg:w-80 sm:w-96 h-12/12 rounded-lg p-10 flex flex-col items-center relative gap-8 border-solid border-2 border-[#B7A261] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"
+          className={`lg:w-80 sm:w-96 h-12/12 rounded-lg p-10 flex flex-col items-center relative gap-8 border-solid border-[3px]  ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white border-[#B7A261]"
             }`}
         >
           <div className="w-40 h-40 rounded-full  image ">

@@ -9,7 +9,7 @@ import { AiOutlineSafetyCertificate } from "react-icons/ai";
 const Navbar = ({ bgcolor, darkmode }) => {
   return (
     <>
-      <nav className={`lg:block sm:hidden h-full border-2 border-[#B7A261] mt-40 rounded-lg ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white"} `}>
+      <nav className={`lg:block sm:hidden h-full border-[3px] mt-40 rounded-lg ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white border-[#B7A261]"} `}>
         <div
           className={`w-24 rounded-lg p-5 flex flex-col items-center gap-2`}
         >
