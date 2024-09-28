@@ -37,7 +37,7 @@ const About = ({ bgcolor, darkmode }) => {
           >What I DO!</h1>
 
           <div className="flex gap-5 flex-wrap ">
-            <div className="ui-ux-design w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FFF4F4" : "black"}`, border: `${bgcolor === "white" ? "none" : "1px solid #A6A6A6"}` }}>
+            <div className="  w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FDF4F4" : "#60594B"}`, border: `${bgcolor === "white" ? "1px solid #B7A261" : "1px solid #60594B"}` }}>
               <div>
                 <AiOutlineLaptop className="text-4xl my-2 text-yellow-600" />
               </div>
@@ -51,7 +51,7 @@ const About = ({ bgcolor, darkmode }) => {
               </div>
             </div>
 
-            <div className="ui-ux-design w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#EEF5FA" : "black"}`, border: `${bgcolor === "white" ? "none" : "1px solid #A6A6A6"}` }}>
+            <div className="  w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FDF4F4" : "#60594B"}`, border: `${bgcolor === "white" ? "1px solid #B7A261" : "1px solid #60594B"}` }}>
               <div>
                 <LiaSwatchbookSolid className="text-4xl my-2 text-purple-600" />
               </div>
@@ -64,7 +64,7 @@ const About = ({ bgcolor, darkmode }) => {
               </div>
             </div>
 
-            <div className="ui-ux-design w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#EEF5FA" : "black"}`, border: `${bgcolor === "white" ? "none" : "1px solid #A6A6A6"}` }}>
+            <div className="  w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FDF4F4" : "#60594B"}`, border: `${bgcolor === "white" ? "1px solid #B7A261" : "1px solid #60594B"}` }}>
               <div>
                 <BsDatabaseDown className="text-4xl my-2 text-green-400" />
               </div>
@@ -77,7 +77,7 @@ const About = ({ bgcolor, darkmode }) => {
               </div>
             </div>
 
-            <div className="ui-ux-design w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FFF4F4" : "black"}`, border: `${bgcolor === "white" ? "none" : "1px solid #A6A6A6"}` }}>
+            <div className="  w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FDF4F4" : "#60594B"}`, border: `${bgcolor === "white" ? "1px solid #B7A261" : "1px solid #60594B"}` }}>
               <div>
                 <BiLogoFlutter className="text-4xl my-2 text-blue-500" />
               </div>

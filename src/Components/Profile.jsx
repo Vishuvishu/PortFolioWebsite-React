@@ -343,8 +343,6 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             <button className={`${bgcolor === "white" ? "bg-[#B7A261]" : "bg-[#C2B293] "}   flex items-center rounded-lg justify-center p-2 text-lg text-nowrap w-36 h-10`}>
               {/* <a href={cv} download="Resume" className="flex"> */}
               <a href={"https://drive.google.com/file/d/1JVNneRNr845-oGLpgPgjUsmkEmH5Q0e-/view?usp=sharing"} className="flex gap-2 text-[#3B3729] ">
-
-
                 {" "}
                 <p><b>View Resume</b></p>
               </a>
