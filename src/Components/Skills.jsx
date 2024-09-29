@@ -75,7 +75,7 @@ const Skills = ({ bgcolor, darkmode }) => {
           {
             skills.map((curr, i) =>
               <div key={i} className=" text-center rounded-lg w-[70px] h-[70px] rounded-lg shadow-custom border border-[#B7A261] ">
-                <img src={curr.png} className="w-full p-2 mb-3 " />
+                <img src={curr.png} className="w-full h-full p-2 mb-3 " />
                 <h1 className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>{curr.skill}</h1>
               </div>)
           }
