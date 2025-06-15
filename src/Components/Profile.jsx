@@ -164,8 +164,10 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             }}
           >
             <ul style={{ listStyleType: 'square', paddingLeft: '20px' }}> {/* Explicitly set bullet points and indentation */}
-              <li style={{ marginBottom: '5px' }}>Flutter Mobile Developer</li>
+              <li style={{ marginBottom: '5px' }}>Java backend developer</li>
+              <li style={{ marginBottom: '5px' }}>Go lang developer</li>
               <li style={{ marginBottom: '5px' }} >MERN Web - Full Stack Developer</li>
+              <li style={{ marginBottom: '5px' }}>Flutter Mobile Developer</li>
               <li >UI/UX Designer</li>
             </ul>
           </div>
