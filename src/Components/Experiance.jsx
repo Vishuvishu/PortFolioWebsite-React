@@ -26,7 +26,7 @@ const Experiance = ({ bgcolor, darkmode }) => {
             >
               <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}  >2021-2025</p>
               <h1 style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}> <b> B.TECH ( IT ) from CSPIT, CHARUSAT </b> </h1>
-              <h1 style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>9.18 CGPA</b> till 6th Sem</h1>
+              <h1 style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>9.26 CGPA</b> </h1>
             </div>
 
             <div
@@ -58,7 +58,7 @@ const Experiance = ({ bgcolor, darkmode }) => {
               <div className="ui-ux-design flex flex-col gap-1 p-4">
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Company: IBM</b></p>
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Role:</b> Software Developer Engineer Intern</p>
-                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> July / 2024 - Jan / 2025 (6 months)</p>
+                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> July / 2024 - July / 2026 (1 year)</p>
               </div>
             </div>
 
