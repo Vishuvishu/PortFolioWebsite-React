@@ -22,7 +22,7 @@ import docker from "../Components/SocialLinks/Docker.svg"
 import figma from "../Components/SocialLinks/figma.new.png"
 import powerbi from "../Components/SocialLinks/powerbi.png"
 import go from "../Components/SocialLinks/Go-Logo_Aqua.svg"
-import java from "../Components/SocialLinks/java-logo-black-and-white-1.png"
+import java from "../Components/SocialLinks/java-logo.webp"
 import postreSQL from "../Components/SocialLinks/PostgreSQL-Logo.wine.png"
 
 const Skills = ({ bgcolor, darkmode }) => {
