@@ -21,21 +21,26 @@ import android from "../Components/SocialLinks/Android_Fun.svg"
 import docker from "../Components/SocialLinks/Docker.svg"
 import figma from "../Components/SocialLinks/figma.new.png"
 import powerbi from "../Components/SocialLinks/powerbi.png"
-
+import go from "../Components/SocialLinks/Go-Logo_Aqua.svg"
+import java from "../Components/SocialLinks/java-logo-black-and-white-1.png"
+import postreSQL from "../Components/SocialLinks/PostgreSQL-Logo.wine.png"
 
 const Skills = ({ bgcolor, darkmode }) => {
 
 
   const skills =
     [
-      { skill: "Flutter", png: flutter },
-      { skill: "Android", png: android },
-      { skill: "FireBase", png: firebase },
+      { skill: "Java", png: java },
+      { skill: "Go Lang", png: go },
+      { skill: "My Sql", png: mysql },
+      { skill: "PostgreSQL", png: postreSQL },
       { skill: "Nodejs", png: nodejs },
       { skill: "ExpressJs", png: expressJs },
       { skill: "ReactJs", png: react },
       { skill: "MongodDb", png: mongodb },
-      { skill: "My Sql", png: mysql },
+      { skill: "Flutter", png: flutter },
+      { skill: "Android", png: android },
+      { skill: "FireBase", png: firebase },
       { skill: "HTML", png: html },
       { skill: "Css", png: css },
       { skill: "Js", png: js },
