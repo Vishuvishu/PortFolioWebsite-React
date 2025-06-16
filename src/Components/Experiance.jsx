@@ -93,7 +93,7 @@ const Experiance = ({ bgcolor, darkmode }) => {
               >
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Company:   Alakhnanda InfoPlus</b> </p>
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }} > <b>Role:</b> Ui/UX Designer Intern</p>
-                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> Oct / 2023 - Feb / 2024 (4 month)</p>
+                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> Oct / 2023 - Feb / 2024 (4 months)</p>
               </div>
             </div>
             <div className="flex flex-nowrap w-[120] rounded-lg items-center" style={{ border: `${bgcolor === "white" ? "3px solid #B7A261" : "2px solid #4B3D10"}` }}>
@@ -106,7 +106,7 @@ const Experiance = ({ bgcolor, darkmode }) => {
               >
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Company:    Scalot Technolgoies</b> </p>
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }} > <b>Role:</b> Flutter Developer Intern</p>
-                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> May / 2023 - Jun / 2023 (2 month)</p>
+                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> May / 2023 - Jun / 2023 (2 months)</p>
               </div>
             </div>
 
