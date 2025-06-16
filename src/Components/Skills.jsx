@@ -15,7 +15,7 @@ import bootstrap from "../Components/SocialLinks/icons8-bootstrap-48.png"
 import flutter from "../Components/SocialLinks/flutter.svg"
 import firebase from "../Components/SocialLinks/FireBase.svg"
 import mysql from "../Components/SocialLinks/MySql.svg"
-import tablue from "../Components/SocialLinks/Tablue.jpeg"
+import Tableau from "../Components/SocialLinks/Tablue.jpeg"
 import shopify from "../Components/SocialLinks/Shopify.webp"
 import android from "../Components/SocialLinks/Android_Fun.svg"
 import docker from "../Components/SocialLinks/Docker.svg"
@@ -24,6 +24,8 @@ import powerbi from "../Components/SocialLinks/powerbi.png"
 import go from "../Components/SocialLinks/Go-Logo_Aqua.svg"
 import java from "../Components/SocialLinks/java-logo.webp"
 import postreSQL from "../Components/SocialLinks/PostgreSQL-Logo.wine.png"
+import camunda from "../Components/SocialLinks/camunda.png"
+import temporal from "../Components/SocialLinks/temporal_engine.jpeg"
 
 const Skills = ({ bgcolor, darkmode }) => {
 
@@ -32,7 +34,7 @@ const Skills = ({ bgcolor, darkmode }) => {
     [
       { skill: "Java", png: java },
       { skill: "Go Lang", png: go },
-      { skill: "My Sql", png: mysql },
+      { skill: "MySQL", png: mysql },
       { skill: "PostgreSQL", png: postreSQL },
       { skill: "Nodejs", png: nodejs },
       { skill: "ExpressJs", png: expressJs },
@@ -40,10 +42,10 @@ const Skills = ({ bgcolor, darkmode }) => {
       { skill: "MongodDb", png: mongodb },
       { skill: "Flutter", png: flutter },
       { skill: "Android", png: android },
-      { skill: "FireBase", png: firebase },
+      { skill: "Firebase", png: firebase },
       { skill: "HTML", png: html },
-      { skill: "Css", png: css },
-      { skill: "Js", png: js },
+      { skill: "CSS", png: css },
+      { skill: "JS", png: js },
       { skill: "Bootstrap", png: bootstrap },
       { skill: "Tailwind", png: tailwind },
     ]
@@ -53,13 +55,18 @@ const Skills = ({ bgcolor, darkmode }) => {
       { skill: "Figma", png: figma },
       { skill: "Docker", png: docker },
       { skill: "Shopify", png: shopify },
-      { skill: "Tablue", png: tablue },
-      { skill: "Power bi", png: powerbi },
-
+      { skill: "Tableau", png: Tableau },
+      { skill: "Power BI", png: powerbi },
       { skill: "Git", png: git },
       { skill: "Github", png: github },
       { skill: "Postman", png: postman },
 
+    ]
+
+   const workflowSkills =
+    [
+      { skill: "Temporal", png: temporal },
+      { skill: "Camunda", png: camunda }
     ]
 
 
@@ -98,6 +105,23 @@ const Skills = ({ bgcolor, darkmode }) => {
         <div className="w-full flex flex-wrap gap-y-[60px] gap-x-7">
           {
             otherSkills.map((curr, i) =>
+              <div key={i} className="text-center rounded-lg w-[70px] h-[70px] shadow-custom border border-[#B7A261] ">
+                <img src={curr.png} className="w-full h-full p-2 mb-3 object-contain" />
+                <h1 className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>{curr.skill}</h1>
+              </div>)
+          }
+        </div>
+
+        <h1
+          className={`text-2xl font-bold pt-[56px] ${bgcolor === "white" ? "text-black" : "text-white"
+            }`}
+        >
+          Workflow Orchestration / Process Automation engines
+        </h1>
+
+        <div className="w-full flex flex-wrap gap-y-[60px] gap-x-7">
+          {
+            workflowSkills.map((curr, i) =>
               <div key={i} className="text-center rounded-lg w-[70px] h-[70px] shadow-custom border border-[#B7A261] ">
                 <img src={curr.png} className="w-full h-full p-2 mb-3 object-contain" />
                 <h1 className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>{curr.skill}</h1>
