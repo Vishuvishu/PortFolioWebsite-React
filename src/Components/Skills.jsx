@@ -119,7 +119,7 @@ const Skills = ({ bgcolor, darkmode }) => {
           Workflow Orchestration / Process Automation engines
         </h1>
 
-        <div className="w-full flex flex-wrap gap-y-[60px] gap-x-7 pb-(10px)">
+        <div className="w-full flex flex-wrap gap-y-[60px] gap-x-7 pb-[10px]">
           {
             workflowSkills.map((curr, i) =>
               <div key={i} className="text-center rounded-lg w-[70px] h-[70px] shadow-custom border border-[#B7A261] ">
