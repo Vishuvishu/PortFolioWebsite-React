@@ -8,7 +8,28 @@ import scalotlight from "../Components/SocialLinks/scalotlight.png";
 import "../Components/Global.css";
 import Certificate from "./Skills";
 
+const calculateDuration = (startDate) => {
+  const start = new Date(startDate);
+  const now = new Date();
+
+  let years = now.getFullYear() - start.getFullYear();
+  let months = now.getMonth() - start.getMonth();
+
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  const yearLabel = years > 0 ? `${years} year${years > 1 ? 's' : ''}` : "";
+  const monthLabel = months > 0 ? `${months} month${months > 1 ? 's' : ''}` : "";
+
+  return `${yearLabel}${yearLabel && monthLabel ? ' ' : ''}${monthLabel}`;
+};
+
+
 const Experiance = ({ bgcolor, darkmode }) => {
+  const ibmStartDate = "2024-07-10"; 
+  const ibmDuration = calculateDuration(ibmStartDate);
 
   return (
     <>
@@ -58,7 +79,7 @@ const Experiance = ({ bgcolor, darkmode }) => {
               <div className="ui-ux-design flex flex-col gap-1 p-4">
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Company: IBM</b></p>
                 <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Role:</b> Software Developer Engineer Intern</p>
-                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> July / 2024 - July / 2026 (1 year)</p>
+                <p style={{ color: `${bgcolor === "white" ? "#000000" : "#FDFAF0"}` }}><b>Duration:</b> July / 2024 - Present ({ibmDuration})</p>
               </div>
             </div>
 
