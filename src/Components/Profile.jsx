@@ -149,7 +149,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor, setCross }) => {
             }`}
         >
           <div className="w-40 h-40 rounded-full  image ">
-            <img src={profilephotoimg} className={`w-screen rounded-lg w-40 h-50 object-cover border-solid border-4 border-[#B7A261] `} />
+            <img src={profilephotoimg} className={`w-screen rounded-lg w-40 h-50 object-cover border-solid border-4 ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white border-[#B7A261]" }`} />
           </div>
           <h1
             className={`text-xl font-bold relative lg:top-20 sm:top-24 ${bgcolor === "white" ? "text-black" : "text-[#CCC0C0]"
