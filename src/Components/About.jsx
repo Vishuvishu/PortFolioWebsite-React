@@ -19,15 +19,14 @@ const About = ({ bgcolor, darkmode }) => {
           >
             I am a <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> passionate tech enthusiast </span>with a deep interest in <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> Web and App Development.</span>
             Currently, I am pursuing a B.Tech in Information Technology at CSPIT, CHARUSAT,
-            and am gaining valuable experience as an  <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>SDE Intern at IBM.</span> I possess expertise in <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>Flutter Development, UI/UX Design, React.js, and Tailwind CSS</span> for web development, as well as <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>Node.js and Express.js </span>for robust backend solutions.
+            and am gaining valuable experience as an  <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>SDE Intern at IBM.</span> I possess expertise in <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> Java, Node.js and Express.js for Backend Development, and also in Flutter Development, UI/UX Design, React.js, and Tailwind CSS</span>.
             <br />{" "}
           </p>
 
           <p
             style={{ color: `${bgcolor === "white" ? "#000000" : "#A6A6A6"}` }}
           >
-            Noteworthy Achievement of my carear is ranking in <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> Top 10 Teams at hackathon </span> hosted by<span className="font-bold">  IEEE </span>SB at DAIICT, Gandhinagar.
-            As UI/UX Designer my several apps and websites designs are currently in used in production.
+            Noteworthy <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> Achievement </span> of my career is that our team ranked <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> 3rd at Interns hackathon of IBM.</span> Additionaly in my student life we ranked in <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> Top 10 Teams at hackathon </span> hosted by <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> IEEE SB at DAIICT, Gandhinagar. </span>
             <br /><br />{" "}
             Additionally, I have did internship as Flutter Developer, UI/UX Designer and Java Developer.
             <br />This diverse experience has provided me with a holistic <span className={`font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}>understanding on front-end and back-end technologies, as well as user experience,</span> allowing me to make meaningful contributions across various facets of technology projects.
@@ -37,6 +36,20 @@ const About = ({ bgcolor, darkmode }) => {
           >What I DO!</h1>
 
           <div className="flex gap-5 flex-wrap ">
+
+            <div className="  w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FDF4F4" : "#60594B"}`, border: `${bgcolor === "white" ? "1px solid #B7A261" : "1px solid #60594B"}` }}>
+              <div>
+                <BsDatabaseDown className="text-4xl my-2 text-green-400" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <h1 className={`font-bold my-2 ${bgcolor === "white" ? "text-black" : "text-white"}`}>Backend Developement</h1>
+                <p className="text-sm"
+                  style={{ color: `${bgcolor === "white" ? "#000000" : "#A6A6A6"}` }}
+                >
+                  Skilled in <span className="font-bold">JAVA, Node.js, Express.js </span> I build scalable backend systems and efficient server-side solutions using databases like  <span className="font-bold">MongoDB and MySQL</span> for dynamic applications.                </p>
+              </div>
+            </div>
+
             <div className="  w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FDF4F4" : "#60594B"}`, border: `${bgcolor === "white" ? "1px solid #B7A261" : "1px solid #60594B"}` }}>
               <div>
                 <AiOutlineLaptop className="text-4xl my-2 text-yellow-600" />
@@ -61,19 +74,6 @@ const About = ({ bgcolor, darkmode }) => {
                   style={{ color: `${bgcolor === "white" ? "#000000" : "#A6A6A6"}` }}
                 >
                   With strong expertise in UI/UX design, I excel at creating <span className="font-bold">intuitive and visually engaging user experiences,</span> translating user needs into seamless, impactful Designs.                </p>
-              </div>
-            </div>
-
-            <div className="  w-80 flex gap-3 p-4 rounded-lg" style={{ background: `${bgcolor === "white" ? "#FDF4F4" : "#60594B"}`, border: `${bgcolor === "white" ? "1px solid #B7A261" : "1px solid #60594B"}` }}>
-              <div>
-                <BsDatabaseDown className="text-4xl my-2 text-green-400" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <h1 className={`font-bold my-2 ${bgcolor === "white" ? "text-black" : "text-white"}`}>Backend Developement</h1>
-                <p className="text-sm"
-                  style={{ color: `${bgcolor === "white" ? "#000000" : "#A6A6A6"}` }}
-                >
-                  Skilled in <span className="font-bold">Node.js, Express.js, Java</span> I build scalable backend systems and efficient server-side solutions using databases like  <span className="font-bold">MongoDB and MySQL</span> for dynamic applications.                </p>
               </div>
             </div>
 
