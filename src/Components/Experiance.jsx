@@ -23,13 +23,18 @@ const calculateDuration = (startDate) => {
 };
 
 const responsibilities = {
+  ibm1: [
+    "Developed import/export capabilities within the DSL, allowing exported models to be re-imported by other tenants",
+    "Optimized performance for orchestration engine"
+
+  ],
   ibm2: [
     "Evaluated Temporal as alternate workflow orchestration engine",
     "Designed and implemented dynamic workflows in Temporal using Java and Go",
     "Created custom Domain-Specific Language (DSL) to model workflows intuitively",
     "Developed workflow editor UI using React Flow to explore DSL-driven workflow modeling",
     "Developed migration utility for bi-directional transformation between BPMN and custom DSL",
-    "Optimized performance for orchestration engine"
+    "Worked as part of a team designing and implementing an AI-based tool to transform OpenAPI specifications into MCP tools"
   ],
   ibm3: [
     "Implemented Business Process Management (BPM) solutions using camunda 8",
@@ -130,7 +135,8 @@ const Experiance = ({ bgcolor, darkmode }) => {
         </div>
 
         <div className="flex-col gap-5 flex-wrap space-y-5">
-          {renderCompany("ibm2", ibmLogo, "IBM ( PUNE )", "Software Developer Engineer Intern", `Jan / 2025 - Present (${ibmDuration})`)}
+          {renderCompany("ibm1", ibmLogo, "IBM ( PUNE )", "Software Developer Engineer", `July / 2025 - Present (${ibmDuration})`)}
+          {renderCompany("ibm2", ibmLogo, "IBM ( PUNE )", "Software Developer Engineer Intern", `Jan / 2025 - July / 2025`)}
           {renderCompany("ibm3", ibmLogo, "IBM ( AHMEDABAD )", "Software Developer Engineer Intern", `July / 2024 - Jan / 2025`)}
           {renderCompany("alakhnanda", Aldnddwww, "Alakhnanda InfoPlus", "UI/UX Designer Intern", "Dec / 2023 - Apr / 2024 (4 months)")}
           {renderCompany("scalot", scalotlight, "Scalot Technologies", "Flutter Developer Intern", "May / 2023 - Jul / 2023 (3 months)")}
