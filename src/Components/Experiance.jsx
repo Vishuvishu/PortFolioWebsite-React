@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import ibmLogo from "../Components/SocialLinks/ibm.png";
 import Aldnddwww from "../Components/SocialLinks/AlkhnandaInfoLogo.png";
 import scalotlight from "../Components/SocialLinks/scalotlight.png";
@@ -16,17 +17,16 @@ const calculateDuration = (startDate) => {
     months += 12;
   }
 
-  const yearLabel = years > 0 ? `${years} year${years > 1 ? 's' : ''}` : "";
-  const monthLabel = months > 0 ? `${months} month${months > 1 ? 's' : ''}` : "";
+  const yearLabel = years > 0 ? `${years} yr${years > 1 ? "s" : ""}` : "";
+  const monthLabel = months > 0 ? `${months} mo${months > 1 ? "s" : ""}` : "";
 
-  return `${yearLabel}${yearLabel && monthLabel ? ' ' : ''}${monthLabel}`;
+  return `${yearLabel}${yearLabel && monthLabel ? " " : ""}${monthLabel}`;
 };
 
 const responsibilities = {
   ibm1: [
     "Developed import/export capabilities within the DSL, allowing exported models to be re-imported by other tenants",
-    "Optimized performance for orchestration engine"
-
+    "Optimized performance for orchestration engine",
   ],
   ibm2: [
     "Evaluated Temporal as alternate workflow orchestration engine",
@@ -34,28 +34,26 @@ const responsibilities = {
     "Created custom Domain-Specific Language (DSL) to model workflows intuitively",
     "Developed workflow editor UI using React Flow to explore DSL-driven workflow modeling",
     "Developed migration utility for bi-directional transformation between BPMN and custom DSL",
-    "Worked as part of a team designing and implementing an AI-based tool to transform OpenAPI specifications into MCP tools"
+    "Worked as part of a team designing and implementing an AI-based tool to transform OpenAPI specifications into MCP tools",
   ],
   ibm3: [
-    "Implemented Business Process Management (BPM) solutions using camunda 8",
+    "Implemented Business Process Management (BPM) solutions using Camunda 8",
     "Evaluated Zeebe engine as alternative to Camunda engine",
-    "Created migration plan from camunda 7 to 8",
-    "Worked with Java REST and gRPC APIs",
+    "Created migration plan from Camunda 7 to 8",
     "Developed Java-based REST and gRPC APIs",
     "Built migration utility to convert workflow models from Camunda 7 to 8",
-    "Business Process Management using Camunda",
-    "Worked in Agile development environment"
+    "Worked in Agile development environment",
   ],
   alakhnanda: [
-    "Designed Official website for company",
+    "Designed official website for company",
     "Created Figma wireframes and responsive layouts for client website",
     "Designed webpages for company product",
   ],
   scalot: [
     "Flutter App Development",
-    "State Management flutter",
+    "State Management with Flutter",
     "Interactive Widgets",
-    "Responsive App development"
+    "Responsive App development",
   ],
 };
 
@@ -65,81 +63,88 @@ const Experiance = ({ bgcolor, darkmode }) => {
 
   const [expandedCompany, setExpandedCompany] = useState(null);
   const toggleExpand = (key) => {
-    setExpandedCompany(prev => (prev === key ? null : key));
+    setExpandedCompany((prev) => (prev === key ? null : key));
   };
 
-  const textColor = bgcolor === "white" ? "#000000" : "#FDFAF0";
-  const borderColor = bgcolor === "white" ? "#B7A261" : "#4B3D10";
+  const textColor = bgcolor === "white" ? "text-gray-900" : "text-gray-100";
+  const borderColor = bgcolor === "white" ? "border-yellow-600" : "border-yellow-900";
 
   const renderCompany = (key, logo, name, role, duration) => (
-    <div
-      className="flex flex-col rounded-lg cursor-pointer"
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className={`rounded-2xl shadow-md cursor-pointer transition-all duration-300 border ${borderColor} bg-opacity-60 backdrop-blur-lg`}
       onClick={() => toggleExpand(key)}
-      style={{ border: `2px solid ${borderColor}` }}
     >
-      <div className="flex items-center">
-        <div
-          className="rounded-lg w-[80px] h-[80px] ml-[15px]"
-          style={{ border: `2px solid ${borderColor}` }}
-        >
-          <img src={logo} className="rounded-lg" />
+      <div className="flex items-center p-4">
+        <div className="rounded-xl overflow-hidden w-[70px] h-[70px] flex-shrink-0 border border-gray-300">
+          <img src={logo} className="object-contain w-full h-full" alt={name} />
         </div>
-        <div className="ui-ux-design flex flex-col gap-1 p-4">
-          <p style={{ color: textColor }}><b>Company: {name}</b></p>
-          <p style={{ color: textColor }}><b>Role:</b> {role}</p>
-          <p style={{ color: textColor }}><b>Duration:</b> {duration}</p>
+        <div className="ml-4 flex flex-col">
+          <h3 className={`font-semibold text-lg ${textColor}`}>{name}</h3>
+          <p className={`text-sm ${textColor}`}>Role: {role}</p>
+          <p className="text-xs text-gray-500">{duration}</p>
         </div>
       </div>
 
-      {expandedCompany === key && (
-        <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedCompany === key ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-            } p-4 pt-0 pl-5 text-sm`}>
-          <h4 className="font-semibold mb-1" style={{ color: textColor }}>Responsibilities:</h4>
-          <ul className="list-disc ml-4" style={{ color: textColor }}>
-            {responsibilities[key].map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-      )}
-    </div>
+      <AnimatePresence>
+        {expandedCompany === key && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.4 }}
+            className="px-6 pb-4"
+          >
+            <h4 className="font-medium mb-2 text-yellow-700">Responsibilities:</h4>
+            <ul className={`list-disc pl-5 space-y-1 ${textColor}`}>
+              {responsibilities[key].map((item, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.05 }}
+                >
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 
   return (
     <div className="ml-10 mr-10 mb-10 h-fit">
-      <div className={`border-solid border-[3px] ${darkmode === "dark" ? "bg-black border-[#4B3D10]" : "bg-white border-[#B7A261]"} p-10 rounded-lg`}>
+      <div
+        className={`p-10 rounded-2xl border-2 ${
+          darkmode === "dark" ? "bg-black/70 border-yellow-900" : "bg-white border-yellow-600"
+        } shadow-xl`}
+      >
         {/* Education Section */}
-        <div className="Education flex items-center mb-4">
-          <h1 className={`text-xl font-bold ${bgcolor === "white" ? "text-black" : "text-[#FDFAF0]"}`}> Education</h1>
-        </div>
-        <div className="flex gap-4 flex-wrap">
-          <div className="ui-ux-design flex-grow flex flex-col gap-2 p-4 rounded-lg" style={{ border: `3px solid ${borderColor}` }}>
-            <p style={{ color: textColor }}>2021-2025</p>
-            <h1 style={{ color: textColor }}><b>B.TECH ( IT ) from CSPIT, CHARUSAT</b></h1>
-            <h1 style={{ color: textColor }}><b>9.26 CGPA</b></h1>
+        <h1 className={`text-2xl font-bold mb-6 ${textColor}`}>Education</h1>
+        <div className="grid md:grid-cols-2 gap-5 mb-10">
+          <div className={`p-5 rounded-xl border ${borderColor}`}>
+            <p className="text-gray-500">2021 - 2025</p>
+            <h2 className={`font-semibold ${textColor}`}>B.TECH ( IT ) – CSPIT, CHARUSAT</h2>
+            <p className={`${textColor}`}>9.26 CGPA</p>
           </div>
-          <div className="ui-ux-design flex-grow flex flex-col gap-2 p-4 rounded-lg" style={{ border: `3px solid ${borderColor}` }}>
-            <p style={{ color: textColor }}>2019-2020</p>
-            <h1 style={{ color: textColor }}><b>HSC P.P.SAVANI, Surat</b></h1>
-            <h1 style={{ color: textColor }}><b>86%</b></h1>
+          <div className={`p-5 rounded-xl border ${borderColor}`}>
+            <p className="text-gray-500">2019 - 2020</p>
+            <h2 className={`font-semibold ${textColor}`}>HSC – P.P.SAVANI, Surat</h2>
+            <p className={`${textColor}`}>86%</p>
           </div>
         </div>
 
         {/* Experience Section */}
-        <div>
-          <div className="Education flex items-center gap-1 my-4">
-            <h1 className={`text-xl my-2 font-bold ${bgcolor === "white" ? "text-black" : "text-white"}`}> Experience </h1>
-          </div>
-        </div>
-
-        <div className="flex-col gap-5 flex-wrap space-y-5">
-          {renderCompany("ibm1", ibmLogo, "IBM ( PUNE )", "Software Developer Engineer", `July / 2025 - Present (${ibmDuration})`)}
-          {renderCompany("ibm2", ibmLogo, "IBM ( PUNE )", "Software Developer Engineer Intern", `Jan / 2025 - July / 2025`)}
-          {renderCompany("ibm3", ibmLogo, "IBM ( AHMEDABAD )", "Software Developer Engineer Intern", `July / 2024 - Jan / 2025`)}
-          {renderCompany("alakhnanda", Aldnddwww, "Alakhnanda InfoPlus", "UI/UX Designer Intern", "Dec / 2023 - Apr / 2024 (4 months)")}
-          {renderCompany("scalot", scalotlight, "Scalot Technologies", "Flutter Developer Intern", "May / 2023 - Jul / 2023 (3 months)")}
+        <h1 className={`text-2xl font-bold mb-6 ${textColor}`}>Experience</h1>
+        <div className="flex flex-col gap-5">
+          {renderCompany("ibm1", ibmLogo, "IBM ( Pune )", "Software Developer Engineer", `July 2025 - Present (${ibmDuration})`)}
+          {renderCompany("ibm2", ibmLogo, "IBM ( Pune )", "Software Developer Engineer Intern", `Jan 2025 - July 2025`)}
+          {renderCompany("ibm3", ibmLogo, "IBM ( Ahmedabad )", "Software Developer Engineer Intern", `July 2024 - Jan 2025`)}
+          {renderCompany("alakhnanda", Aldnddwww, "Alakhnanda InfoPlus", "UI/UX Designer Intern", "Dec 2023 - Apr 2024 (4 months)")}
+          {renderCompany("scalot", scalotlight, "Scalot Technologies", "Flutter Developer Intern", "May 2023 - Jul 2023 (3 months)")}
         </div>
       </div>
     </div>
