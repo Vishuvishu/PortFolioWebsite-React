@@ -27,6 +27,9 @@ const responsibilities = {
   ibm1: [
     "Developed import/export capabilities within the DSL, allowing exported models to be re-imported by other tenants",
     "Optimized performance for orchestration engine",
+    "Implemented temporal with the hybrid DSL based approach to enable dynamic workflow execution",
+    "Designed and implemented dynamic + hybrid workflow execution using Temporal and custom DSL",
+    "developed temporal engine and worker as microservices using Java and Go, with REST and gRPC APIs for workflow management",
   ],
   ibm2: [
     "Evaluated Temporal as alternate workflow orchestration engine",
@@ -138,8 +141,12 @@ const Experiance = ({ bgcolor, darkmode }) => {
         </div>
 
         {/* Experience Section */}
-        <h1 className={`text-2xl font-bold mb-6 ${textColor}`}>Experience</h1>
-        <div className="flex flex-col gap-5">
+<h1 className={`text-2xl font-bold mb-6 ${textColor}`}>
+  Experience
+  <span className="block text-sm font-normal mt-1 opacity-70">
+    Click on the role to see my contribution
+  </span>
+</h1>        <div className="flex flex-col gap-5">
           {renderCompany("ibm1", ibmLogo, "IBM ( Pune )", "Software Developer Engineer", `July 2025 - Present (${ibmDuration})`)}
           {renderCompany("ibm2", ibmLogo, "IBM ( Pune )", "Software Developer Engineer Intern", `Jan 2025 - July 2025`)}
           {renderCompany("ibm3", ibmLogo, "IBM ( Ahmedabad )", "Software Developer Engineer Intern", `July 2024 - Jan 2025`)}
